@@ -1,8 +1,8 @@
--- Create a new database called 'ECommerceDB'
--- Connect to the 'master' database to run this snippet
+-- 'ECommerceDB' adında database oluşturma
+-- Bu pasajı çalıştırmak için 'master' veritabanına bağlanın
 USE master
 GO
--- Create the new database if it does not exist already
+-- Henüz mevcut değilse yeni veritabanını oluşturun
 IF NOT EXISTS (
      SELECT [name]
           FROM sys.databases
@@ -14,7 +14,7 @@ GO
 USE ECommerceDB;
 GO
 
--- Drop tables if they exist
+-- Eğer varsa tabloları kaldırın
 IF OBJECT_ID('[dbo].[OrderShipments]', 'U') IS NOT NULL DROP TABLE [dbo].[OrderShipments];
 IF OBJECT_ID('[dbo].[Wishlists]', 'U') IS NOT NULL DROP TABLE [dbo].[Wishlists];
 IF OBJECT_ID('[dbo].[ProductImages]', 'U') IS NOT NULL DROP TABLE [dbo].[ProductImages];
@@ -29,7 +29,7 @@ IF OBJECT_ID('[dbo].[ShippingMethods]', 'U') IS NOT NULL DROP TABLE [dbo].[Shipp
 IF OBJECT_ID('[dbo].[Users]', 'U') IS NOT NULL DROP TABLE [dbo].[Users];
 GO
 
--- Create Users table
+-- 'Users' tablosu
 CREATE TABLE [dbo].[Users]
 (
      [user_id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
@@ -43,7 +43,7 @@ CREATE TABLE [dbo].[Users]
 );
 GO
 
--- Create Categories table
+-- 'Categories' tablosu
 CREATE TABLE [dbo].[Categories]
 (
      [category_id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
@@ -54,7 +54,7 @@ CREATE TABLE [dbo].[Categories]
 );
 GO
 
--- Create Products table
+-- 'Products' tablosu
 CREATE TABLE [dbo].[Products]
 (
      [product_id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
@@ -69,7 +69,7 @@ CREATE TABLE [dbo].[Products]
 );
 GO
 
--- Create Addresses table
+-- 'Addresses' tablosu
 CREATE TABLE [dbo].[Addresses]
 (
      [address_id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
@@ -86,7 +86,7 @@ CREATE TABLE [dbo].[Addresses]
 );
 GO
 
--- Create Orders table
+-- 'Orders' tablosu
 CREATE TABLE [dbo].[Orders]
 (
     [order_id] INT PRIMARY KEY IDENTITY(1,1),
@@ -105,7 +105,7 @@ CREATE TABLE [dbo].[Orders]
 );
 GO
 
--- Create Payments table
+-- 'Payments' tablosu
 CREATE TABLE [dbo].[Payments]
 (
      [payment_id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
@@ -120,7 +120,7 @@ CREATE TABLE [dbo].[Payments]
 );
 GO
 
--- Create OrderItems table
+-- 'OrderItems' tablosu
 CREATE TABLE [dbo].[OrderItems]
 (
      [order_item_id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
@@ -136,7 +136,7 @@ CREATE TABLE [dbo].[OrderItems]
 );
 GO
 
--- Create ProductsReviews table
+-- 'ProductsReviews' tablosu
 CREATE TABLE [dbo].[ProductsReviews]
 (
      [review_id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
@@ -151,7 +151,7 @@ CREATE TABLE [dbo].[ProductsReviews]
 );
 GO
 
--- Create ProductImages table
+-- 'ProductImages' tablosu
 CREATE TABLE [dbo].[ProductImages]
 (
      [image_id] INT PRIMARY KEY IDENTITY(1,1),
@@ -163,7 +163,7 @@ CREATE TABLE [dbo].[ProductImages]
 );
 GO
 
--- Create Wishlists table
+-- 'Wishlists' tablosu
 CREATE TABLE [dbo].[Wishlists]
 (
      [wishlist_id] INT PRIMARY KEY IDENTITY(1,1),
@@ -176,7 +176,7 @@ CREATE TABLE [dbo].[Wishlists]
 );
 GO
 
--- Create ShippingMethods table
+-- 'ShippingMethods' tablosu
 CREATE TABLE [dbo].[ShippingMethods]
 (
      [shipping_method_id] INT PRIMARY KEY IDENTITY(1,1),
@@ -188,7 +188,7 @@ CREATE TABLE [dbo].[ShippingMethods]
 );
 GO
 
--- Create OrderShipments table
+-- 'OrderShipments' tablosu
 CREATE TABLE [dbo].[OrderShipments]
 (
      [shipment_id] INT PRIMARY KEY IDENTITY(1,1),
