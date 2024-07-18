@@ -7,6 +7,7 @@ Bu proje, e-ticaret sitesi için T-SQL kullanarak bir veritabanı tasarımı ve 
 2. [Stored Procedures]
 3. [Views]
 4. [Functions]
+5. [Triggers]
 
 ## Veritabanı ve Tabloların Oluşturulması
 
