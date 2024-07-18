@@ -9,6 +9,8 @@ Bu proje, e-ticaret sitesi için T-SQL kullanarak bir veritabanı tasarımı ve 
 4. [Functions]
 5. [Triggers]
 6. [Constraints ve Indexes]
+8. [Auditing]
+9. [Dynamic SQL]
 
 ## Veritabanı ve Tabloların Oluşturulması
 
