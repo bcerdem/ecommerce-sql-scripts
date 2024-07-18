@@ -1,4 +1,10 @@
 # Ecommerce Database Design 
+Bu proje, e-ticaret sitesi için T-SQL kullanarak bir veritabanı tasarımı ve yönetimi içermektedir. Aşağıda, bu projede gerçekleştirilen işlemler ve kullanılan komutlar sırasıyla açıklanmaktadır.
+
+## İçindekiler
+
+1. [Veritabanı ve Tabloların Oluşturulması]
+2. [Stored Procedures]
 
 ## Veritabanı ve Tabloların Oluşturulması
 
